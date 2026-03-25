@@ -1,8 +1,12 @@
 import React from 'react';
 import heroImg from '../../assets/hero.png'
 import StatsSection from '../../components/StatsSection/StatsSection';
+import Apps from '../Apps/Apps';
+import { useLoaderData } from 'react-router';
 
 const Home = () => {
+    const data = useLoaderData();
+    console.log(data)
     return (
         <div>
             <div className='text-center py-14'>
@@ -15,6 +19,9 @@ const Home = () => {
             </div>
             <div>
                 <StatsSection></StatsSection>
+            </div>
+            <div>
+                <Apps data={data}></Apps>
             </div>
         </div>
 
