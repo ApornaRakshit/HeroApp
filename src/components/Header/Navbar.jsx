@@ -1,32 +1,62 @@
 import React from 'react';
+import logo from "../../assets/logo.png";
+import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
-    const links = <>
-    <li className='m-2'>Home</li>
-    <li className='m-2'>About</li>
-    </>
+    const links = (
+        <>
+            <li className="px-3 py-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-400">
+                Home
+            </li>
+            <li className="px-3 py-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-400">
+                Apps
+            </li>
+            <li className="px-3 py-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-400">
+                Installation
+            </li>
+        </>
+    );
+
     return (
-        <div className="navbar bg-base-100 shadow-sm">
-            <div className="navbar-start">
-                <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+        <div className="text-black shadow-sm  ">
+            <div className="navbar max-w-7xl mx-auto">
+                <div className="navbar-start">
+                    <div className="dropdown">
+                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+
+                        <ul className="menu menu-sm dropdown-content bg-[#0f2a36] rounded-box z-10 mt-3 w-52 p-2 shadow">
+                            {links}
+                        </ul>
                     </div>
-                    <ul
-                        tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+
+                    <a className="flex items-center cursor-pointer gap-2 text-xl font-semibold">
+                        <img className="w-8 h-8" src={logo} alt="logo" />
+                        <p className='text-purple-500'>HERO.IO</p>
+                    </a>
+                </div>
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal px-1 ">
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
-            </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    {links}
-                </ul>
-            </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+                <div className="navbar-end">
+                    <button className="bg-linear-to-r from-purple-700 to-purple-400 hover:bg-purple-700 px-4 py-2 rounded-lg flex items-center gap-2">
+                        <FaGithub className="text-white" />
+                        <p className='text-white'>Contribute</p>
+                    </button>
+                </div>
+
             </div>
         </div>
     );
