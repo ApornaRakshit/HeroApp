@@ -16,7 +16,6 @@ const App = ({ singleApp }) => {
                         className="w-full h-full object-cover"
                     />
                 </div>
-
                 <h3 className="mt-3 text-sm font-medium text-gray-800 line-clamp-2">
                     {title}
                 </h3>
