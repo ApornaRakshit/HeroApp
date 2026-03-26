@@ -42,7 +42,7 @@ The platform focuses on providing a clean UI, smooth user experience, and respon
 
 ### Deployment
 
-* 🌐 (Add your platform: Netlify )
+* 🌐 (Platform: Netlify https://boisterous-dolphin-4f71bd.netlify.app/ )
 
 ---
 
