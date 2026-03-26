@@ -1,16 +1,17 @@
 import React from 'react';
 import logo from "../../assets/logo.png";
 import { FaGithub } from "react-icons/fa";
+import { Link } from 'react-router';
 
 const Navbar = () => {
     const links = (
         <>
-            <li className="px-3 py-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-400">
+            <Link to='/'><li className="px-3 py-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-400">
                 Home
-            </li>
-            <li className="px-3 py-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-400">
+            </li></Link>
+            <Link to="/app"><li className="px-3 py-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-400">
                 Apps
-            </li>
+            </li></Link>
             <li className="px-3 py-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-400">
                 Installation
             </li>
@@ -22,7 +23,7 @@ const Navbar = () => {
             <div className="navbar max-w-7xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
+                        <div tabIndex={0} role="button" className="btn btn-ghost text-black lg:hidden ">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-5 w-5"
@@ -35,7 +36,7 @@ const Navbar = () => {
                             </svg>
                         </div>
 
-                        <ul className="menu menu-sm dropdown-content bg-[#0f2a36] rounded-box z-10 mt-3 w-52 p-2 shadow">
+                        <ul className="menu menu-sm dropdown-content bg-[#ecf3f6] rounded-box z-10 mt-3 w-52 p-2 shadow">
                             {links}
                         </ul>
                     </div>
